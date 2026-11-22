@@ -1,0 +1,12 @@
+{
+  "name": "ncm-listen-together-plugin",
+  "version": "0.3.1",
+  "private": true,
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node --test test/*.test.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.20.2"
+  }
+}

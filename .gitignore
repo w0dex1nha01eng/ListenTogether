@@ -1,0 +1,7 @@
+/node_modules/
+/dist/
+/packaging/.build/
+/packaging/dist/
+/packaging/vendor/
+/work/
+*.log

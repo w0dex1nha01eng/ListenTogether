@@ -1,0 +1,38 @@
+NCM-ListenTogether launcher for Windows x64
+===========================================
+
+This single executable bundles:
+
+1. Runtime files from BetterNCM v3 Portable x64 (19 files, app/ only).
+   Project : https://github.com/Leafmy/BetterNCM-v3
+   Version : v3.0.0
+   Commit  : 7ac5b54c59deb72448603c93caaad85f25139bfa
+   License : GPL-3.0-or-later. Full text: runtime/LICENSE
+   Notices : runtime/THIRD-PARTY-NOTICES.md
+   Archive : https://github.com/Leafmy/BetterNCM-v3/releases/download/v3.0.0/BetterNCM-v3-Portable-x64.zip
+             SHA-256 ecd2c17389efa1520cbd3426d0418eb4e5131d2aa66ef789c7d9557af5b066b7
+
+   The build script verifies that exact SHA-256 before reading the archive.
+   Source  : https://github.com/Leafmy/BetterNCM-v3/tree/7ac5b54c59deb72448603c93caaad85f25139bfa
+   The launcher and build script use the pinned archive without downloading it.
+
+2. Node.js v24.21.0 runtime.
+   License: MIT, with bundled third-party license texts.
+   Full text: runtime/bin/NODE-LICENSE.txt
+
+3. The "多人一起听" / ncm-listen-together BetterNCM plugin, compiled from
+   this repository's current manifest.json and src/ tree.
+
+Deliberately NOT bundled or installed:
+  - app/out/loader/version.dll (the proxy DLL)
+  - app/plugins/* (third-party plugins)
+  - any NetEase client binary, account/session data, user profile, log,
+    host.json, agent.lock, registry service, run key, or autostart entry.
+
+The launcher writes only under %LOCALAPPDATA%\NCM-ListenTogether\ and never
+copies files into the NetEase Cloud Music installation directory. It does not
+register autostart and does not force-stop the client.
+
+The embedded runtime is distributed under GPL-3.0-or-later. Corresponding
+source is the BetterNCM v3 project above, tag v3.0.0, plus this repository for
+the launcher and plugin sources.

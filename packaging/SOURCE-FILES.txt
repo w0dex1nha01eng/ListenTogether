@@ -1,0 +1,27 @@
+# BetterNCM v3.0.0 Portable x64 -- exact runtime files embedded by this launcher.
+# The audit archive SHA-256 is verified by build.ps1 before any entry is read.
+#
+# Deliberately excluded: app/out (the version.dll proxy), app/plugins (the three
+# third-party plugins), data/, user profile data, logs, host.json, agent.lock,
+# installer/autostart registration, and every file outside app/.
+#
+# 19 entries. Keep this list explicit and review it before changing the payload.
+app/LICENSE
+app/THIRD-PARTY-NOTICES.md
+app/bin/NODE-LICENSE.txt
+app/bin/node.exe
+app/loader/bncm-agent.vbs
+app/loader/create-shortcut.ps1
+app/loader/framework.js
+app/loader/hijacks.json
+app/loader/install.ps1
+app/loader/manager.js
+app/loader/paths.ps1
+app/loader/selectors.json
+app/loader/startup.ps1
+app/loader/uninstall.ps1
+app/tools/bncm_agent.mjs
+app/tools/bncm_preload.js
+app/tools/cdp_inject.mjs
+app/tools/cdp_watch.mjs
+app/tools/ncm_host.mjs
